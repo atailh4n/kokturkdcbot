@@ -1,0 +1,41 @@
+{
+  "name": "kokturkdcbot",
+  "version": "0.0.2",
+  "description": "Köktürk Discord Botu Açık Kaynak Kodu",
+  "main": "kokturk.js",
+  "dependencies": {
+    "dbd-capriham-theme": "^1.0.6",
+    "discord-dashboard": "^1.2.5",
+    "discord-player": "^4.1.4",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.13.3",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "os": "^0.1.1",
+    "passport": "^0.1.18",
+    "passport-discord": "^0.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node kokturk.js",
+    "dev": "nodemon ./src/web/app.js",
+    "start": "node ./src/web/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/atailh4n/kokturkdcbot.git"
+  },
+  "author": "atailh4n",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atailh4n/kokturkdcbot/issues"
+  },
+  "homepage": "https://github.com/atailh4n/kokturkdcbot#readme"
+}

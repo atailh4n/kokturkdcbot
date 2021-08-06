@@ -1,0 +1,32 @@
+const { MessageEmbed } = require("discord.js")
+const main = require('./Main_Info.js')
+module.exports = (type, title, desc, author, thumb) => {
+
+        const kokturkembed = new MessageEmbed()
+        .setTimestamp()
+
+        let newColor = ""
+        let emojidisp = ""
+        let newFooter = ""
+        let newThumb = ""
+        let newAuthor = ""
+        let newDescription = ""
+        let newTitle = ""
+        if(type == "general") newColor = `${main.displaythings.color_main}`, emojidisp = `${main.displaythings.emoj_main}`, newThumb = `${main.displaythings.botlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname}`, newDescription = desc, newTitle = title
+        else if (type == "error") newColor = `${maim.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Error`, newDescription = desc, newTitle = title
+        else if (type == "info") newColor = `${main.displaythings.color_info}`, emojidisp = `${main.displaythings.emoj_info}`, newThumb = `${main.displaythings.infologo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Info`, newDescription = desc, newTitle = title
+        else if (type == "warn") newColor = `${main.displaythings.color_warn}`, emojidisp = `${main.displaythings.emoj_warn}`, newThumb = `${main.displaythings.warnlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Warning`, newDescription = desc, newTitle = title
+        else if (type == "err1") newColor = `${main.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Error`, newDescription = `Bu anahtara/değere sahip herhangi bir anahtar/değer bulunamadı veya bu anahtara/değere aship bir şey zaten var.`, newTitle = `ERRCD: 0001 | Veritabanı Hatası`
+        else if (type == "err1_en") newColor = `${main.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Error`, newDescription = `No key/value was found with this key/value, or something already exists with this key/value.`, newTitle = `ERRCD: 0001 | Database Error`
+        else if (type == "err2") newColor = `${main.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Error`, newDescription = `Bu komut kendi üzerinizde çalıştıramayacağınız bir komuttur.\n> **Örnek Kullanım: ${title}**`, newTitle = `ERRCD: 0002 | Bu Komut Kendi Üzerinde Çalıştırılamaz`
+        else if (type == "err2_en") newColor = `${main.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Error`, newDescription = `This command is a command that you cannot run on yourself.\n> **Example Usage: ${title}**`, newTitle = `ERRCD: 0002 | This Command Cannot Runable on Yourself`
+        else if (type == "warn1") newColor = `${main.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Warn`, newDescription = `Kayıp argüman.\n> **Örnek Kullanım: ${title}**`, newTitle = `WARNCD: 0001 | Kayıp Argüman`
+        else if (type == "warn1_en") newColor = `${main.displaythings.color_err}`, emojidisp = `${main.displaythings.emoj_err}`, newThumb = `${main.displaythings.errlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Warn`, newDescription = `Missing argument.\n> **Example Usage: ${title}**`, newTitle = `WARNCD: 0001 | Missing Argument`
+        else if (type == "success") newColor = `${main.displaythings.color_succ}`, emojidisp = `${main.displaythings.emoj_succ}`, newThumb = `${main.displaythings.succlogo}`, newFooter = `${main.displaythings.botname} | Ver: ${main.displaythings.version} | Prefix: ${main.displaythings.prefix} | ${main.displaythings.botwebsite}`, newAuthor = `${main.displaythings.botname} | Success`, newDescription = desc, newTitle = title
+    
+        if (newColor == "" || emojidisp == "" || newThumb == "" || newFooter == "" || newAuthor == "" || newDescription == "" || newTitle == "") zyronembed.setColor(`${main.displaythings.color_main}`).setTitle(`${title}`).setImage(`${image}`).setThumbnail(`${thumb}`).setFooter(`${main.displaythings.botname} | Ver: ${main.displaythings.version} | For Help: ${main.displaythings.prefix}help`).setDescription(desc).setAuthor(author)
+        else kokturkembed.setColor(newColor).setTitle(`${newTitle}`).setThumbnail(`${newThumb}`).setFooter(`${newFooter}`, `${main.displaythings.botlogo}`).setDescription(emojidisp + " " + newDescription).setAuthor(`${newAuthor}`, `${newThumb}`)
+
+        return kokturkembed;
+
+};
